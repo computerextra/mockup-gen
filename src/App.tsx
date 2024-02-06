@@ -1,9 +1,27 @@
+import { useState } from "react";
+
 function App() {
+  const [url, setUrl] = useState("https://computer-extra.de");
+  const [realUrl, setRealUrl] = useState("https://computer-extra.de");
+
+  const click = (url: string) => {
+    if (url == null || url == "") {
+      setRealUrl("https://computer-extra.de");
+      return;
+    }
+    setRealUrl(url);
+  };
+
   return (
     <>
-      <p>Hier wird ein INPUT sein, der die URL ändert.</p>
+      <input
+        type="text"
+        placeholder={url}
+        onChange={(e) => setUrl(e.target.value)}
+      />
+      <button onClick={() => click(url)}>reload</button>
       <div className="container">
-        <div className="mockup-wrapper">
+        <div className="mockup-wrapper" id="imapicture">
           <div className="inner-wrapper">
             <div
               className="desktop-wrapper ui-draggable ui-draggable-handle"
@@ -12,7 +30,7 @@ function App() {
               <div className="desktop-inner">
                 <iframe
                   id="frame"
-                  src="https://computer-extra.de"
+                  src={realUrl}
                   width="600"
                   height="342"
                 ></iframe>
@@ -24,7 +42,7 @@ function App() {
               <div className="mac-inner">
                 <iframe
                   id="frame_mac"
-                  src="https://computer-extra.de"
+                  src={realUrl}
                   width="600"
                   height="342"
                 ></iframe>
@@ -39,7 +57,7 @@ function App() {
               <div className="ipad-inner">
                 <iframe
                   id="frame_ipad"
-                  src="https://computer-extra.de"
+                  src={realUrl}
                   width="200"
                   height="260"
                 ></iframe>
@@ -55,7 +73,7 @@ function App() {
               <div className="iphone-inner">
                 <iframe
                   id="frame_iphone5"
-                  src="https://computer-extra.de"
+                  src={realUrl}
                   width="105"
                   height="181"
                 ></iframe>
