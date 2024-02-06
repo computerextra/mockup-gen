@@ -5,5 +5,6 @@ Dieser Generator ist für interne Zwecke gedacht und funktioniert nur auf einem 
 ## How to run
 
 ```bash
+npm install
 npm run dev
 ```
