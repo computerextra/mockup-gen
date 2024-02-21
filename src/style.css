@@ -15,7 +15,7 @@
 }
 
 .inner-wrapper {
-  background: linear-gradient(
+  /* background: linear-gradient(
     0deg,
     rgba(222, 222, 222, 1) 0%,
     rgba(179, 176, 176, 1) 14%,
@@ -23,7 +23,7 @@
     rgba(177, 177, 177, 0.9416141456582633) 22%,
     rgba(223, 223, 223, 1) 56%,
     rgba(255, 255, 255, 1) 95%
-  );
+  ); */
   position: relative;
   height: 648px;
 }
